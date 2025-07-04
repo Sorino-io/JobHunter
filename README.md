@@ -154,7 +154,37 @@ jobhunter/
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Please follow our commit message guidelines:
+
+### Commit Message Format
+
+We use [Conventional Commits](https://www.conventionalcommits.org/) for consistent commit messages:
+
+```
+<type>(<scope>): <subject>
+```
+
+**Examples:**
+- `feat(frontend): add dashboard views for job analytics`
+- `fix(backend): resolve database connection timeout issue`
+- `docs(shared): update API documentation for job types`
+- `style(frontend): format Vue components with prettier`
+- `test(backend): add unit tests for authentication service`
+
+**Available types:** feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
+
+**Available scopes:** frontend, backend, ai-agents, shared, deps, config, docker, docs
+
+### Quick Commit Setup
+
+For interactive commit messages, use:
+```bash
+pnpm commit
+```
+
+This will guide you through creating properly formatted commit messages.
+
+For full contributing guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
