@@ -11,32 +11,68 @@ This package contains the FastAPI backend server for the JobHunter application.
 
 ## Setup
 
-1. Create a virtual environment:
+1. Install Poetry (if not already installed):
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-2. Install dependencies:
+2. Navigate to the backend directory:
 ```bash
-pip install -r requirements.txt
+cd packages/backend
 ```
 
-3. Install Playwright browsers:
+3. Install dependencies:
 ```bash
+poetry install
+```
+
+4. Activate the Poetry shell (optional but recommended):
+```bash
+poetry shell
+```
+This creates and activates a virtual environment for the project. Once activated, you can run commands directly without the `poetry run` prefix.
+
+5. Install Playwright browsers:
+```bash
+# If using poetry shell:
 playwright install
+
+# If not using poetry shell:
+poetry run playwright install
 ```
 
-4. Set up environment variables:
+6. Set up environment variables:
 ```bash
-cp .env.example .env
+cp ../../.env.example .env
 # Edit .env with your configuration
 ```
 
-5. Run the development server:
+7. Run the development server:
 ```bash
-python -m src.main
+# If using poetry shell:
+uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+
+# If not using poetry shell:
+poetry run start
 ```
+
+## Development Commands
+
+### With Poetry Shell Activated (`poetry shell`)
+- **Start server**: `uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload`
+- **Run tests**: `pytest`
+- **Format code**: `black src/`
+- **Sort imports**: `isort src/`
+- **Type checking**: `mypy src/`
+- **Lint code**: `flake8 src/`
+
+### Without Poetry Shell (using `poetry run`)
+- **Start server**: `poetry run start`
+- **Run tests**: `poetry run pytest`
+- **Format code**: `poetry run black src/`
+- **Sort imports**: `poetry run isort src/`
+- **Type checking**: `poetry run mypy src/`
+- **Lint code**: `poetry run flake8 src/`
 
 ## API Documentation
 
