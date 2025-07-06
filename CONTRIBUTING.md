@@ -149,6 +149,7 @@ BREAKING CHANGE: API endpoints now require authentication
 ### PR Title Format
 
 Use the same format as commit messages:
+
 ```
 feat(frontend): add dashboard views for job analytics
 ```
@@ -163,12 +164,14 @@ feat(frontend): add dashboard views for job analytics
 ## Code Standards
 
 ### TypeScript/JavaScript (Frontend)
+
 - Use TypeScript for all new code
-- Follow ESLint and Prettier configurations
+- Follow Oxlint and Prettier configurations
 - Use Vue 3 Composition API
 - Write unit tests for components
 
 ### Python (Backend/AI Agents)
+
 - Follow PEP 8 style guide
 - Use type hints
 - Format with Black
@@ -176,6 +179,7 @@ feat(frontend): add dashboard views for job analytics
 - Write unit tests with pytest
 
 ### General
+
 - Write clear, self-documenting code
 - Add comments for complex logic
 - Keep functions small and focused

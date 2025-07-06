@@ -1,0 +1,17 @@
+{
+    "rules": {
+        "no-unused-vars": "error",
+        "no-console": "warn",
+        "prefer-const": "error",
+        "no-var": "error",
+        "eqeqeq": "error",
+        "no-implicit-coercion": "error"
+    },
+    "ignore": [
+        "node_modules/**",
+        "dist/**",
+        "build/**",
+        "coverage/**",
+        "*.config.*"
+    ]
+}
