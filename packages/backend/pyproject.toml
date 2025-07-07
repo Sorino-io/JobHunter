@@ -33,7 +33,7 @@ flake8 = "^6.0.0"
 mypy = "^1.7.0"
 
 [tool.poetry.scripts]
-start = "uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload"
+start = "src.main:start_server"
 
 [build-system]
 requires = ["poetry-core"]

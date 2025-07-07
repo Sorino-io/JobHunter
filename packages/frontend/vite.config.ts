@@ -28,7 +28,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     rollupOptions: {
-      input: resolve(__dirname, "public/index.html"),
+      input: resolve(__dirname, "index.html"),
     },
   },
   resolve: {
@@ -37,7 +37,9 @@ export default defineConfig({
     },
   },
   server: {
-    port: 5173,
+    host: "0.0.0.0",
+    port: 3003,
+    open: true,
     proxy: {
       "/api": {
         target: "http://localhost:8000",
