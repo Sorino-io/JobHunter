@@ -28,6 +28,7 @@ module.exports = {
         'shared',
         'deps',
         'config',
+        'workflow',
         'docker',
         'docs'
       ]
