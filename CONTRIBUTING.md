@@ -76,6 +76,7 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 - **shared**: Shared utilities and types
 - **deps**: Dependency updates
 - **config**: Configuration changes
+- **workflow**: CI/CD workflows changes
 - **docker**: Docker-related changes
 - **docs**: Documentation changes
 
