@@ -2,9 +2,9 @@ name: Commit Message Validation
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [master]
   pull_request:
-    branches: [ main, master, develop ]
+    branches: [master]
 
 jobs:
   commitlint:
@@ -18,11 +18,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          node-version: "18"
+          cache: "pnpm"
+      
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
 
       - name: Validate current commit (push)
         if: github.event_name == 'push'
