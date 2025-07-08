@@ -2,9 +2,9 @@ name: Commit Message Validation
 
 on:
   push:
-    branches: [master]
+    branches: ["**"]
   pull_request:
-    branches: [master]
+    branches: ["**"]
 
 jobs:
   commitlint:
